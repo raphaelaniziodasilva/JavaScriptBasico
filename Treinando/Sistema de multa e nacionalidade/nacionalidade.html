@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            font-size: 1.4em;
+        }
+        input {
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Em qual pais você mora: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Pesquisar" onclick="pesquisar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function pesquisar() {//fazer ligação com html
+            var txtpais = window.document.querySelector('input#txtpais')
+            var res = window.document.querySelector('div#res')
+            //criando variavies strings
+            var pais = String(txtpais.value)
+            //resposta que vai aparecer no seu navegador
+            res.innerHTML = `<p>Você mora nos(a) <strong>${pais}</strong></p>`
+            //condição composta
+            if(pais != 'brasil'){
+                res.innerHTML += 'Você e <strong>Estrangeiro</strong>'
+            } else {
+                res.innerHTML += 'Voce é <strong>Brasileiro</strong>'
+            }
+        }       
+
+    </script>
+    
+</body>
+</html>

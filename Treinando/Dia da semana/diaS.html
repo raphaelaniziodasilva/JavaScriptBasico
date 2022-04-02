@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semana</title>
+</head>
+<body>
+    <h1>Dia da Semana</h1>
+    de 1 a 6 escolha um número <input type="number" name="txtdia" id="txtdia">
+    <input type="button" value="Escolher" onclick="escolher()">
+    <div id="caso"> Caso: </div>
+
+    <script>
+        function escolher() {
+        var txtdia = window.document.querySelector('input#txtdia')
+        var caso = window.document.querySelector('div#caso')
+        //criando variavel
+        var dia = Number(txtdia.value)
+        caso.innerHTML = 'Hoje é '
+
+        switch (dia) {
+            case 0:
+            caso.innerHTML += 'Domingo'
+            break
+            case 1:
+            caso.innerHTML += 'Segunda-Feria'
+            break
+            case 2:
+            caso.innerHTML += 'Terça-Feria'
+            break
+            case 3:
+            caso.innerHTML += 'Quarta-Feria'
+            break
+            case 4:
+            caso.innerHTML += 'Quinta-Feria'
+            break
+            case 5:
+            caso.innerHTML += 'Sexta-Feria'
+            break
+            case 6:
+            caso.innerHTML = 'Sabado'
+            break
+            default:
+            caso.innerHTML += 'Dia inexistente'
+            break
+        }
+    }
+
+
+    </script>
+
+    
+</body>
+</html>

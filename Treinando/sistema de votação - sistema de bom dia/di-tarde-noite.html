@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem</title>
+</head>
+<body>
+    <h1>Inform se e dia, tarde noite ou madrugada</h1>
+    <input type="number" name="txthoras" id="txthoras"> horas
+    <input type="button" value="Pesquisar" onclick="Pesquisar()">
+    <div id="resposta">
+
+    </div>
+
+    <script>
+        function Pesquisar() {
+            //crie variavel e faça ligações com html
+            var txthoras = window.document.querySelector('input#txthoras')
+            var resposta = window.document.querySelector('div#resposta')
+           //crie variavel para o número
+           var agora = new Date()
+           var horas = agora.getHours ()
+           resposta.innerHTML = `<p>São exatamente <strong>${horas} horas</strong></p>`
+           if (horas >= 1 && horas < 6) {
+            resposta.innerHTML += 'Boa madrugada'
+           } else if (horas < 13) {
+            resposta.innerHTML += 'Bom dia'
+           } else if (horas < 19) {
+            resposta.innerHTML += 'Boa tarde'
+           } else {
+            resposta.innerHTML += 'Boa noite'
+           }
+
+        }
+
+    </script>
+    
+
+</body>
+</html>

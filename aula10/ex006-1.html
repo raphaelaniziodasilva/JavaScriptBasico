@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #area {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: rgb(53, 171, 207);
+            text-align: center;
+            line-height: 300px;
+            font-size: 4em;
+            font-weight: bolder;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Fazendo a interação com Elemento Dom dentro do JavaScript</h1>
+    <div id="area">Interaja</div>
+    <script>
+        var area = window.document.getElementById('area')
+        //vamos usar os listeners
+        area.addEventListener('click', clicar)
+        area.addEventListener('mouseenter', entrar)
+        area.addEventListener('mouseout', sair)
+
+        function clicar() {
+            area.innerText = 'Clicou!'
+            area.style.background = 'red'
+        }
+        function entrar() {
+            area.innerText = 'Entrou!'
+        }
+        function sair() {
+            area.innerText = 'Saiu'
+            area.style.background = 'green'
+        }
+
+    </script>
+
+    
+</body>
+</html>

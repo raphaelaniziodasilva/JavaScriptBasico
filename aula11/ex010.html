@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        input {
+            width: 60px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistemas de Multas do DETRAN</h1>
+    Velocidade do Carro: <input type="number" name="txtvel" id="txtvel">Km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"> </div>
+
+    <script>
+        function calcular(){
+            //fazer as ligações do input e div
+            var txtv = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            //criar variavel para número
+            var vel = Number(txtv.value)
+            //mostrar na tela do navegador com o id res
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}Km/h</strong></p>`
+            //fazendo codinção simples. use o += para que o res não seja apagado quando voce colocar outro res
+            if (vel > 60){
+                res.innerHTML += `<p>Você esta <strong>Multado</strong> por excesso de<strong> VELOCIDADE</strong></p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com o cinto se segurança!</p>`
+
+
+
+
+        }
+
+    </script>
+
+    
+</body>
+</html>

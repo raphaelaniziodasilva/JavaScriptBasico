@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detran</title>
+    <style>
+        body {
+            font-size: 1.4em;
+        }
+        input {
+            width: 70px;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sistema de Multa Detran de São Paulo</h1>
+    Velocidade do Veículo automotor: <input type="number" name="txtvel" id="txtvel">
+    <input type="button" value="Verificar" onclick="calcular()"
+    >
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular (){//fazendo ligação com html
+            var txtvel = window.document.querySelector('input#txtvel')
+            var res = window.document.querySelector('div#res')
+            //criando variavel do tipo número
+            var vel = Number(txtvel.value)
+            res.innerHTML = `<p>A sua velocidade é de <strong>${vel}km/h</strong></p>`
+            if(vel > 60){//condição simples
+                res.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade.! A velocidade permitida e de <strong>60km/h</strong></p>`
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

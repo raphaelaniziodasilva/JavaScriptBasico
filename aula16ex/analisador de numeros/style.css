@@ -1,0 +1,29 @@
+
+body {
+    background-color: rgb(16, 120, 238);
+}
+
+header {
+    color: white;
+    text-align: center;
+}
+
+section {
+    width: 430px;
+    background-color: white;
+    border-radius: 8px;
+    text-indent: 5px;
+    margin: auto;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.356);
+    padding: 10px;
+}
+
+section select {
+    width: 150px;
+    
+}
+
+footer {
+    color: white;
+    text-align: center;
+}
